@@ -1,0 +1,292 @@
+/* ── Super Mario Style ───────────────────────────────────── */
+/* Mario palette:
+   Red    #E52521  |  Blue   #049CD8  |  Yellow #FBD000
+   Green  #43B047  |  Brown  #8B5E3C  |  Sky    #5C94FC  */
+
+/* ── Global ──────────────────────────────────────────────── */
+body {
+  background-color: #5c94fc; /* Mario sky blue */
+  color: #000000;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ── Navbar ──────────────────────────────────────────────── */
+.octofit-navbar {
+  background-color: #E52521 !important; /* Mario red */
+  border-bottom: 4px solid #8B0000;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 4px 0 #8B0000;
+}
+
+.octofit-navbar .navbar-brand {
+  color: #FBD000 !important; /* coin yellow */
+  font-weight: 900;
+  font-size: 1.3rem;
+  letter-spacing: 0.04em;
+  text-shadow: 2px 2px 0 #8B0000;
+}
+
+.octofit-navbar .nav-link {
+  color: #ffffff !important;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.4rem 0.9rem !important;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.octofit-navbar .nav-link:hover {
+  color: #FBD000 !important;
+  background: rgba(0,0,0,0.2);
+}
+
+.octofit-navbar .nav-link.active {
+  background: #FBD000 !important;
+  color: #8B0000 !important;
+  font-weight: 700;
+  border-radius: 6px;
+}
+
+.octofit-navbar .nav-link.home-active {
+  background: #FBD000 !important;
+  color: #8B0000 !important;
+  font-weight: 700;
+  border-radius: 6px;
+}
+
+
+/* ── Hero Section ─────────────────────────────────────────── */
+.hero-section {
+  background: linear-gradient(180deg, #5c94fc 0%, #049CD8 100%); /* Mario sky */
+  padding: 5rem 3rem;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  margin: 1.5rem;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  border: 4px solid #00468D;
+  box-shadow: 0 8px 0 #00468D;
+}
+
+/* Ground / brick strip at the bottom of hero */
+.hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: repeating-linear-gradient(
+    90deg,
+    #8B5E3C 0px, #8B5E3C 38px,
+    #6B3F1F 38px, #6B3F1F 40px
+  );
+  border-top: 3px solid #6B3F1F;
+}
+
+.hero-eyebrow {
+  color: #FBD000;
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 0 #8B5E3C;
+}
+
+.hero-heading {
+  font-size: 2.8rem;
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-shadow: 3px 3px 0 #00468D;
+}
+
+.hero-heading .accent {
+  color: #FBD000; /* coin yellow */
+  text-shadow: 3px 3px 0 #8B5E3C;
+}
+
+.hero-subtext {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  max-width: 400px;
+  text-shadow: 1px 1px 0 rgba(0,70,141,0.6);
+}
+
+.btn-coral {
+  background-color: #E52521; /* Mario red */
+  border: 3px solid #8B0000;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.55rem 1.4rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 0 #8B0000;
+  transition: transform 0.1s, box-shadow 0.1s;
+  text-shadow: 1px 1px 0 #8B0000;
+}
+
+.btn-coral:hover {
+  background-color: #c01f1c;
+  color: #ffffff;
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #8B0000;
+}
+
+.btn-outline-light-custom {
+  background: #FBD000; /* coin yellow */
+  border: 3px solid #8B5E3C;
+  color: #000000;
+  font-weight: 700;
+  padding: 0.55rem 1.4rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 0 #8B5E3C;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.btn-outline-light-custom:hover {
+  background: #e5c000;
+  color: #000000;
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #8B5E3C;
+}
+
+/* ── Feature Cards ────────────────────────────────────────── */
+.feature-cards-row {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem 1.5rem 2.5rem;
+  flex-wrap: wrap;
+  background: #8B5E3C; /* Mario ground brown */
+  margin: 0 1.5rem 1.5rem;
+  border-radius: 0 0 16px 16px;
+  border: 4px solid #6B3F1F;
+  border-top: none;
+  box-shadow: 0 6px 0 #6B3F1F;
+}
+
+.feature-card {
+  background: #FBD000; /* coin yellow block */
+  border-radius: 10px;
+  padding: 1.4rem 1.2rem;
+  flex: 1;
+  min-width: 160px;
+  text-decoration: none;
+  color: #000000;
+  transition: transform 0.1s, box-shadow 0.1s;
+  box-shadow: 0 5px 0 #8B5E3C;
+  border: 3px solid #8B5E3C;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 9px 0 #6B3F1F;
+  color: #000000;
+}
+
+.feature-card:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #8B5E3C;
+}
+
+.feature-card-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: #E52521; /* Mario red question block */
+  font-size: 1.5rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.85rem;
+  border: 2px solid #8B0000;
+  box-shadow: 0 3px 0 #8B0000;
+}
+
+.feature-card-title {
+  font-weight: 900;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+  color: #000000;
+}
+
+.feature-card-desc {
+  font-size: 0.8rem;
+  color: #3d2b0a;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* ── Mario floating question blocks ──────────────────────── */
+.mario-blocks {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  display: flex;
+  gap: 0.6rem;
+  z-index: 2;
+}
+
+.mario-qblock {
+  width: 44px;
+  height: 44px;
+  background: #FBD000;
+  border: 3px solid #8B5E3C;
+  border-radius: 6px;
+  box-shadow: 0 4px 0 #8B5E3C, inset 0 0 0 3px rgba(255,255,255,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: #8B5E3C;
+  text-shadow: none;
+  animation: mario-block-float 2s ease-in-out infinite alternate;
+}
+
+.mario-qblock:nth-child(2) { animation-delay: 0.3s; }
+.mario-qblock:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes mario-block-float {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-8px); }
+}
+
+/* ── Mario character ─────────────────────────────────────── */
+.mario-character {
+  position: absolute;
+  right: 3rem;
+  bottom: 2rem;
+  font-size: 5rem;
+  line-height: 1;
+  z-index: 2;
+  animation: mario-run 0.6s steps(2) infinite;
+  filter: drop-shadow(3px 3px 0 rgba(0,0,0,0.3));
+}
+
+@keyframes mario-run {
+  from { transform: scaleX(1); }
+  to   { transform: scaleX(-1); }
+}
+
+/* ── Mario HUD bar ───────────────────────────────────────── */
+.mario-hud {
+  background: #000000;
+  color: #FBD000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  margin: 0 1.5rem;
+  border-left: 4px solid #8B5E3C;
+  border-right: 4px solid #8B5E3C;
+}
+
